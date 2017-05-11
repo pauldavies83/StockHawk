@@ -93,7 +93,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
                 @Override
                 public String getFormattedValue(float index, AxisBase axis) {
                     Date date = new Date(timeValues.get((int)index));
-                    return new SimpleDateFormat("MM/YY", Locale.ENGLISH).format(date);
+                    return new SimpleDateFormat("mm/yy", Locale.ENGLISH).format(date);
                 }
             });
             formatChartForDataSet(new LineDataSet(entries, getString(R.string.stock_price_line_description, symbol)));
